@@ -1,0 +1,49 @@
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.pyc
+*.vscode
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.desktop
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build Systems #
+######################
+node_modules/
+bower_components/
+app/bower_components/
+.sass-cache
+*.css.map
+build/
+dist/
+maps/
+prepros.cfg
+
+# Compiled Files #
+######################
+public/css/
+public/maps/
+public/js/
