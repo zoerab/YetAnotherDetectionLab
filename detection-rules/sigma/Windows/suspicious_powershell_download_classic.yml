@@ -1,0 +1,27 @@
+title: Suspicious PowerShell Download - Classic Event Logs
+id: 3236fcd0-b7e3-4433-b4f8-86ad61a9af2d
+status: test
+description: Detects suspicious PowerShell download strings in classic PowerShell execution logs
+author: Florian Roth (Nextron Systems)
+date: 2017-03-05
+modified: 2023-10-27
+references:
+  - https://www.trendmicro.com/en_us/research/22/j/lv-ransomware-exploits-proxyshell-in-attack.html
+logsource:
+  product: windows
+  category: ps_classic_start
+detection:
+  selection_webclient:
+    Data|contains: 'Net.WebClient'
+  selection_download:
+    Data|contains:
+      - '.DownloadFile('
+      - '.DownloadString('
+  condition: all of selection_*
+falsepositives:
+  - PowerShell scripts that download content from the Internet
+level: medium
+tags:
+  - attack.execution
+  - attack.t1059.001
+

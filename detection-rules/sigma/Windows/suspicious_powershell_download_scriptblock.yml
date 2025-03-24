@@ -1,0 +1,31 @@
+title: Suspicious PowerShell Download - Script Block Logging
+id: 403c2cc0-7f6b-4925-9423-bfa573bed7eb
+status: test
+description: Detects use of System.Net.WebClient and download methods in PowerShell script blocks
+author: Florian Roth (Nextron Systems)
+date: 2017-03-05
+modified: 2022-12-02
+references:
+  - https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadstring?view=net-8.0
+  - https://learn.microsoft.com/en-us/dotnet/api/system.net.webclient.downloadfile?view=net-8.0
+logsource:
+  product: windows
+  category: ps_script
+  definition: 'Requirements: Script Block Logging must be enabled'
+detection:
+  webclient:
+    ScriptBlockText|contains: 'System.Net.WebClient'
+  download:
+    ScriptBlockText|contains:
+      - '.DownloadFile('
+      - '.DownloadFileAsync('
+      - '.DownloadString('
+      - '.DownloadStringAsync('
+  condition: webclient and download
+falsepositives:
+  - PowerShell scripts that download content from the Internet
+level: medium
+tags:
+  - attack.execution
+  - attack.t1059.001
+
