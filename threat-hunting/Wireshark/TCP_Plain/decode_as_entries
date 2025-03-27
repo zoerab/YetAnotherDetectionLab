@@ -1,0 +1,7 @@
+# "Decode As" entries file for Wireshark 4.4.2.
+#
+# This file is regenerated each time "Decode As" preferences
+# are saved within Wireshark. Making manual changes should be safe,
+# however.
+decode_as_entry: tcp.port,800,(none),FTP
+decode_as_entry: tcp.port,8285,(none),HTTP

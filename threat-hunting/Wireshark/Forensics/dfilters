@@ -1,0 +1,3 @@
+"Basic" (http.request or tls.handshake.type eq 1) and !(ssdp)
+"Basic+" (http.request or tls.handshake.type eq 1 or tcp.flags eq 0x0002) and !(ssdp)
+"Basic+DNS" (http.request or tls.handshake.type eq 1 or tcp.flags eq 0x0002 or dns) and !(ssdp)
