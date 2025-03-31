@@ -23,7 +23,7 @@ Each project is **built, tested, and documented** as part of my transition into 
 | Folder               | Description                                                       |
 |----------------------|-------------------------------------------------------------------|
 | `detection-rules/`   | Sigma, Suricata, YARA rules with context & metadata               |
-| `automation`       | Python scripts for log parsing, enrichment, and anomaly detection |
+| `automation`         | Python scripts for log parsing, enrichment, and anomaly detection |
 | `xsoar-playbooks/`   | Cortex XSOAR playbooks for enrichment and automated response      |
 | `threat-hunting/`    | PCAP-based hunt reports and detection hypothesis notes            |
 

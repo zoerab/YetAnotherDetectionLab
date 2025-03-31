@@ -8,9 +8,9 @@ This directory contains Sigma rules I’ve written, tested, or customized as par
 
 | Folder     | Description                         |
 |------------|-------------------------------------|
-| `windows/` | Sigma rules for Windows logs        |
-| `linux/`   | (TBD) Linux-based detections        |
-| `cloud/`   | (TBD) Cloud-native detections (AWS, Azure, GCP) |
+| `Windows/` | Sigma rules for Windows logs        |
+| `Linux/`   | (TBD) Linux-based detections        |
+| `Cloud/`   | (TBD) Cloud-native detections (AWS, Azure, GCP) |
 
 ---
 
