@@ -1,0 +1,15 @@
+// Detection / Investigation: Auto Forward / Redirect by Specific User
+// Tactic: Exfiltration
+// Technique: T1114.003 - Email Forwarding Rule Abuse
+// Context: VIP or suspected compromised account monitoring
+
+let specificUser = "username@domain.com"; // Change to user of interest
+CloudAppEvents
+| where Timestamp > ago(1d)
+| where ActionType in ("Set-Mailbox", "New-InboxRule", "Set-InboxRule", "Set-UserMailbox", "New-TransportRule", "Set-TransportRule")
+| where RawEventData contains "Forward" or RawEventData contains "Redirect"
+| extend InitiatingUserOrApp = tostring(parse_json(RawEventData).UserId)
+| extend TargetUser = tostring(parse_json(RawEventData).ObjectId)
+| where InitiatingUserOrApp contains specificUser
+| project Timestamp, ActionType, AccountDisplayName, InitiatingUserOrApp, TargetUser, RawEventData
+

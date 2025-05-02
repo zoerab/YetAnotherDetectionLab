@@ -1,0 +1,15 @@
+// Detection: Global Auto Forward / Redirect Rule Creation
+// Tactic: Exfiltration
+// Technique: T1114.003 - Email Collection: Email Forwarding Rule
+// Coverage: All users in tenant
+// Trigger: New-InboxRule, Set-Mailbox, Set-TransportRule with "Forward" or "Redirect"
+
+CloudAppEvents
+| where Timestamp > ago(1d)
+| where ActionType in ("Set-Mailbox", "New-InboxRule", "Set-InboxRule", "Set-UserMailbox", "New-TransportRule", "Set-TransportRule")
+| where RawEventData contains "Forward" or RawEventData contains "Redirect"
+| project Timestamp, ActionType, AccountDisplayName,
+          InitiatingUserOrApp = tostring(parse_json(RawEventData).UserId),
+          TargetUser = tostring(parse_json(RawEventData).ObjectId),
+          RawEventData
+
