@@ -27,6 +27,7 @@ Each project is **built, tested, and documented** as part of my transition into 
 | &nbsp;&nbsp;└─`sigma-rules/`   | Sigma detection rules for various platforms            |
 | &nbsp;&nbsp;└─`suricata-rules/`| Suricata network detection rules                       |
 | &nbsp;&nbsp;└─`yara-rules/`    | YARA rules for file/memory detection                   |
+| &nbsp;&nbsp;└─`kql/`           | KQL detections and snippets                            |
 | `automation/`                  | Scripts, playbooks, and CI/CD configurations           |
 | &nbsp;&nbsp;└─`scripts/`       | Python scripts for security automation                 |
 | &nbsp;&nbsp;└─`playbooks/`     | Automation playbook definitions                        |
@@ -41,6 +42,7 @@ Each project is **built, tested, and documented** as part of my transition into 
 | &nbsp;&nbsp;└─`zeek/`          | Zeek scripts and log analysis                          |
 | &nbsp;&nbsp;└─`pcaps/`         | PCAP analysis methodologies (no actual PCAPs)          |
 | &nbsp;&nbsp;└─`stratoshark/`   | Cloud-native packet analysis                           |
+| `resources/     `              | Learning resources used/worth mentioning               |
 | `threat-hunting/`              | Threat hunting reports, methodologies, and templates   |
 | &nbsp;&nbsp;└─`hunt-reports/`  | Documented threat hunting exercises                    |
 | &nbsp;&nbsp;└─`methodologies/` | Hunting methodologies and frameworks                   |
@@ -55,6 +57,9 @@ Each project is **built, tested, and documented** as part of my transition into 
 
 - [Suspicious PowerShell Download - Script Block Logging](detection-engineering/sigma-rules/Windows/suspicious_powershell_download_scriptblock.yml) - Detects System.Net.WebClient downloads via Script Block Logging
 - [Suspicious PowerShell Download - Classic Event Logs](detection-engineering/sigma-rules/Windows/suspicious_powershell_download_classic.yml) - Similar detection for classic PowerShell logs
+- [Email Auto Forwarding Global Rule Detection](detection-engineering/kql/email-redirect-detections/auto_forward_global.kql) - Detects auto-forwarding or redirect rules across all mailboxes.
+- [Email Auto Forwarding User-Specific Rule Detection](detection-engineering/kql/email-redirect-detections/auto_forward_user_specific.kql) - Detects if a specific user created forwarding or redirect rules.
+
 
 ### Documentation & Templates
 
@@ -76,17 +81,6 @@ Each project is **built, tested, and documented** as part of my transition into 
 - Python automation for detection logic
 - Security Orchestration (Cortex XSOAR)
 - Network packet analysis and forensics
-
----
-
-## 🗓️ Roadmap (Apr 2025 → Mar 2026)
-
-This portfolio follows a structured quarterly roadmap **(subject to change)**:
-
-- **Q1 (Apr-Jun)**: DE&TH Core – rules, PCAPs, enrichment scripts
-- **Q2 (Jul-Sep)**: Detection Automation – tuning + pipelines
-- **Q3 (Oct-Dec)**: Cloud Bridge – Sigma for cloud, MITRE cloud mapping
-- **Q4 (Jan-Mar)**: Cloud Specialization – detection-as-code, threat sims, final portfolio polish
 
 ---
 
