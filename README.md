@@ -1,20 +1,22 @@
 # 🧪 YetAnotherDetectionLab
 
-Welcome to my detection engineering & threat hunting lab!
+A hands-on cybersecurity lab focused on threat hunting, network packet analysis, detection development, and security automation.
 
 ---
 
 ## 🔍 Purpose
 
-This repo showcases my work in:
+This repository documents practical experiments, tools, and methodologies related to:
 
-- 📦 Detection rule creation (Sigma, YARA, Suricata)
-- 🐍 Python automation for threat detection & enrichment
-- ⚙️ Cortex XSOAR playbook development
-- ☁️ Cloud-native threat detection and response
-- 🧪 Real-world threat simulation and hunting
+- 🔎 Threat hunting and adversary behaviour analysis
+- 📡 Network packet analysis, protocols, and network telemetry
+- 🛡️ Detection development using Sigma, YARA, Suricata, and KQL
+- 🐍 Security automation and threat intelligence enrichment
+- ☁️ Cloud security monitoring and detection
+- 🧪 Threat simulation and detection validation
+- ⚙️ Security orchestration with Cortex XSOAR
 
-Each project is **built, tested, and documented** as part of my transition into a **Cloud Threat Detection Engineer** role.
+Projects are built, tested, and documented to explore practical techniques, validate detection logic, and improve investigative capabilities.
 
 ---
 
@@ -75,24 +77,22 @@ Each project is **built, tested, and documented** as part of my transition into 
 
 ## 🧠 Skills Demonstrated
 
-- Detection-as-Code (Sigma, YAML, Panther-style CI/CD)
 - Threat Hunting (Zeek, Suricata, JA3/JA4+, DNS tunneling, C2 detection)
+- Network packet analysis and forensics
+- Detection-as-Code (Sigma, YAML, Panther-style CI/CD)
 - Cloud-native detection (AWS CloudTrail, Azure Sign-In logs)
 - Python automation for detection logic
 - Security Orchestration (Cortex XSOAR)
-- Network packet analysis and forensics
 
 ---
 
 ## 🌐 Background & Experience
 
-The work in this repository leverages my professional background as:
+This repository builds on my professional experience across cybersecurity, systems administration, and IT infrastructure.
 
-- Cyber Security Analyst at Universiteit Antwerpen (2022-present)
+- Cyber Security Analyst / Threat Hunter at Universiteit Antwerpen (2022-present)
 - Security System Administrator at AP Hogeschool (2017-2022)
-- ICT System Engineer specializing in various IT fields (2007-2014)
-
-My career transition builds on strong foundations in Threat Hunting, Network Engineering, Endpoint Security Management, and Threat Detection.
+- ICT System Engineer, specialising in various IT fields (2007-2014)
 
 ---
 
