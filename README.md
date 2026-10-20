@@ -1,6 +1,6 @@
 # 🧪 YetAnotherDetectionLab
 
-Welcome to my detection engineering & threat hunting lab — a living portfolio that documents my journey from on-prem to cloud-native detection engineering and threat hunting.
+Welcome to my detection engineering & threat hunting lab!
 
 ---
 
